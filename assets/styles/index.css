@@ -36,7 +36,7 @@ h2 {
     margin: 4rem 0;
 }
 
-#producto div, footer, #beggining {
+#galeria div, footer, #beggining {
     padding: 0 20px;
 }
 
@@ -90,13 +90,13 @@ a {
 
 /*Producto*/
 
-#producto {
+#galeria {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* #producto::after  {
+/* #galeria::after  {
     content: "";
     display: block;
     position: relative;
@@ -106,7 +106,7 @@ a {
     margin-top: 60px;
 } */
 
-#producto div {
+#galeria div {
     display: grid;
     grid-template-areas:    'imagen1 imagen2 imagen3'
                             'imagen4 imagen4 imagen5'
@@ -140,16 +140,12 @@ a {
     grid-area: imagen7;
 }
 
-#producto img {
+#galeria img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 4%;
 }
-
-/* #producto img:hover {
-    transform: scale(10px ,10px);
-} */
 
 
 /*sobre-nosotros*/
@@ -174,8 +170,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    align-items: flex-start;
-    justify-items: center;
+   place-items: center;
 }
 
 @media (max-width: 765px) {
@@ -189,36 +184,31 @@ footer h4 {
     margin: 1rem 0;
 }
 
-.footer-contact, .footer-location {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 15px 0;
-}
-
 form label {
-    margin: 3em 0;
     font-size: 1.2em;
 }
 
-form input, textarea {
-    display: block;
+form input, textarea, button {
     width: 100%;
+}
+
+form input,textarea {
+    display: flex;
     margin: 4px 0;
-    padding: .3em .6em;
+    padding: .6em .6em;
     font-size: 18px;
-    background-color: rgb(245, 245, 245);
     border: none;
-    border-radius: 20px;
+    border-radius: 1vh;
 }
 
 form input, button {
     font-weight: bolder;
     color: #0A0908;
     background-color: rgb(245, 245, 245);
-    border-radius: 20px;
-    
+}
+
+button {
+    border-radius: 100vh ;
 }
 
 form textarea {
@@ -230,12 +220,11 @@ button {
     border: none;
     padding: 8px 36px;
     margin: 12px 0;
-    width: 100%;
 }
 
 .footer-location img {
-    width: 80%;
-    height: auto;
+   max-width: 30rem;
+   width: 100%;
 }
 
 footer .end-point {
