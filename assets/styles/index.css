@@ -11,23 +11,23 @@
     list-style: none; /*Quita la decoracion por defecto que tienen las listas.*/
     font-family: 'Marck Script';
     scroll-behavior: smooth;
-}
-
-body {
-    width: 100%; /*Establezco un width y heiht para poder trabajar la distribucion de espacio de los elementos hijos.*/
-    height: 100vh;
-    background-color: #0A0908;
-    color: #fff;
+    color: hsl(0,0%,95%);
 }
 
 /*Global*/
+body {
+    /*Establezco un width y heiht para poder trabajar la distribucion de espacio de los elementos hijos. */
+    width: 100%; 
+    height: 100vh;
+    background-color: #0A0908;
+}
 
 .container {
     max-width: 68rem;
     margin: 0 auto;
 }
 
-h1,h2,h4 {
+h1,h2 {
     font-size: 3em;
     text-align: center;
 }
@@ -43,12 +43,10 @@ h2 {
 /*Header*/
 
  .container-hero { 
-    position: sticky;
-    top: 0;
-    height: 100vh; /*Le indico a la imagen que quiero que ocupe el 100% de su alto*/
+    height: 100vh; /*Le indico a la imagen que quiero que ocupe el 100% de la ventana grafica*/
     background-image: url(../media/beginning/background-image.svg); 
     background-repeat: no-repeat; /*Me permite eliminar el efecto mosaico*/
-    background-position: center center; /*posicion la imagen en el centro del viewport*/
+    background-position: center center; /*posiciono la imagen en el centro del viewport*/
     background-size: cover; /*Indico a la imagen que se recorte lo necesario para cubrir el contenedor sin perder su relacin de aspecto.*/
 } 
 
@@ -70,10 +68,6 @@ nav ul {
 nav ul li{
     font-size: clamp(20px, 4vw, 32px);
     padding: 0 .5rem;
-}
-
-a {
-    color: #fff;
 }
 
 /*Main*/
@@ -103,7 +97,17 @@ a {
     background-color: rgb(245, 245, 245);
     height: 1px;
     width: 600px;
-    margin-top: 60px;
+    margin: 60px auto 0 auto;
+}
+
+.sobre-nosotros::after {
+    content: "";
+    display: block;
+    position: relative;
+    background-color: rgb(245, 245, 245);
+    height: 1px;
+    width: 600px;
+    margin: 60px auto 0 auto;
 } */
 
 #galeria div {
@@ -173,11 +177,7 @@ a {
    place-items: center;
 }
 
-@media (max-width: 765px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 footer h4 {
     font-size: 2em;
@@ -258,7 +258,14 @@ footer .end-point {
     
 }
 
+/*media-query*/
 
+@media (max-width: 765px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+   
+}
 
 
 
