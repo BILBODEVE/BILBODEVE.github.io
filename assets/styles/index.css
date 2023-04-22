@@ -23,7 +23,7 @@ body {
 /*Global*/
 
 .container {
-    max-width: 1400px;
+    max-width: 68rem;
     margin: 0 auto;
 }
 
@@ -170,16 +170,18 @@ a {
 
 /*footer*/
 
-footer {
-    width: 100%;
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: flex-start;
+    justify-items: center;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap-reverse;
-    margin-bottom: 30px;
-    padding: 0 20px;
+@media (max-width: 765px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
 }
 
 footer h4 {
